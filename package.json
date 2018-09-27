@@ -1,0 +1,23 @@
+{
+  "name": "update-bot",
+  "version": "1.0.0",
+  "description": "A friendly little GitHub bot that will keep your PRs up-to-date with the head branch",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/someguynamedmatt/update-bot.git"
+  },
+  "keywords": [
+    "Node",
+    "Bot"
+  ],
+  "author": "Matt <dev@mttyng.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/someguynamedmatt/update-bot/issues"
+  },
+  "homepage": "https://github.com/someguynamedmatt/update-bot#readme"
+}
