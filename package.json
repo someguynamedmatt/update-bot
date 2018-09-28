@@ -2,9 +2,15 @@
   "name": "update-bot",
   "version": "1.0.0",
   "description": "A friendly little GitHub bot that will keep your PRs up-to-date with the head branch",
-  "main": "index.js",
+  "main": "bin/index.js",
+  "bin": {
+    "update-bot": "bin/index.js"
+  },
   "scripts": {
-    "test": "npm test"
+    "grammar": "write-good *.md --no-passive",
+    "markdownlint": "markdownlint *.md",
+    "test": "npm run grammar && npm run markdownlint",
+    "prepush": "npm test"
   },
   "repository": {
     "type": "git",
@@ -19,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/someguynamedmatt/update-bot/issues"
   },
-  "homepage": "https://github.com/someguynamedmatt/update-bot#readme"
+  "homepage": "https://github.com/someguynamedmatt/update-bot#readme",
+  "devDependencies": {
+    "husky": "1.0.1",
+    "markdownlint-cli": "0.13.0",
+    "write-good": "0.13.1",
+    "eslint": "5.0.1",
+    "eslint-config-dollarshaveclub": "3.0.1"
+  }
 }
