@@ -1,0 +1,22 @@
+defaults: &defaults
+  working_directory: ~/code
+  docker:
+    - image: circleci/node:10-browsers
+      environment:
+        NPM_CONFIG_LOGLEVEL: error # make npm commands less noisy
+        JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
+
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - *restore_ci_cache
+      - run: npm install
+      - run: npm test
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - test

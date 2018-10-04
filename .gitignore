@@ -1,0 +1,7 @@
+package-lock.json
+package-lock.json.*
+node_modules/
+*.log
+*.log.*
+.DS_Store
+.eslintcache
